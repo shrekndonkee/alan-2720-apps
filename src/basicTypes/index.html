@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="nord">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="../styles/vs2015.css" />
+    <script src="index.ts" defer type="module"></script>
+    <title>Basic TypeScript Types</title>
+  </head>
+  <body>
+    <main class="flex flex-col bg-blue-100 h-screen">
+      <header class="bg-blue-200">
+        <h1 class="text-4xl">Basic TypeScript Types</h1>
+      </header>
+      <div class="flex grow">
+        <nav class="bg-green-300 min-w-36 text-center">
+          <ul class="m-2 mt-6 space-y-8">
+            <li>
+              <button
+                type="button"
+                id="basicTypesButton"
+                class="btn btn-primary">
+                Basic Types
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                id="arrayTypesButton"
+                class="btn btn-primary">
+                Array Types
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                id="specialTypesButton"
+                class="btn btn-primary">
+                Special Types
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <div id="examplesContainer" class="w-full h-full card bg-base-100 overflow-auto">
+        </div>
+      </div>
+      <footer class="text-center">
+        <p class="p-2 font-bold">&copy; 2025 Alan Martinez-Diaz</p>
+      </footer>
+    </main>
+  </body>
+</html>
