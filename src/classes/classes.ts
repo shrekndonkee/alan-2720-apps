@@ -114,7 +114,7 @@ if (example3) example3.innerHTML = inheritanceExample.renderCodeSnippet()
   const encapsulationExample = new ExampleCodeSnippet(
     'Encapsualtion Example',
     `Encapsulation is a mechanism that binds data and the methods that operate on that data into a single unit. It restricts direct access to some of an object's components, providing a way to protect the internal state and enforce controlled interaction.`,
-    `class BankAccount {
+  `class BankAccount {
   private balance: number;
 
   constructor(initialBalance: number) {
@@ -138,7 +138,7 @@ console.log(account.getBalance()); // 1500`
   const polymorphismExample = new ExampleCodeSnippet(
     'Polymorphism Example',
     `Polymorphism is a mechanism that allows objects of different classes to be treated as objects of a common super class. It enables a single interface to represent different underlying forms (data types), allowing for flexible and reusable code.`,
-    `class Rectangle extends Shape {
+  `class Rectangle extends Shape {
   private width: number
   private height: number
 
