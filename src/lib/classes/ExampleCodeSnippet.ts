@@ -21,7 +21,7 @@ export class ExampleCodeSnippet implements CodeExample {
   renderCodeSnippet(): string {
     return `
       <div class="space-y-4">
-        <h3 class="text-2xl font-bold text-white bg-gradient-to-r from-blue-500 to-blue-700 rounded-lg p-3 text-center shadow-lg">
+        <h3 class="text-2xl font-bold text-white bg-gradient-to-r from-green-700 to-green-900 rounded-lg p-3 text-center shadow-lg">
           ${this.title}
         </h3>
         <p class="text-gray-200 text-lg leading-relaxed px-4">${

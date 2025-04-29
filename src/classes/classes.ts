@@ -124,17 +124,13 @@ if (example3) example3.innerHTML = inheritanceExample.renderCodeSnippet()
   public deposit(amount: number): void {
     if (amount > 0) this.balance += amount;
   }
-
   public getBalance(): number {
     return this.balance;
   }
 }
-
 const account = new BankAccount(1000);
 account.deposit(500);
-console.log(account.getBalance()); // 1500
-
-  `
+console.log(account.getBalance()); // 1500`
   )
 
   if (example4) example4.innerHTML = encapsulationExample.renderCodeSnippet();
@@ -142,34 +138,25 @@ console.log(account.getBalance()); // 1500
   const polymorphismExample = new ExampleCodeSnippet(
     'Polymorphism Example',
     `Polymorphism is a mechanism that allows objects of different classes to be treated as objects of a common super class. It enables a single interface to represent different underlying forms (data types), allowing for flexible and reusable code.`,
-    `class Animal {
-    speak(): void {
-      console.log('The animal makes a sound.');
-    }
+    `class Rectangle extends Shape {
+  private width: number
+  private height: number
+
+  constructor(width: number, height: number, color: string) {
+    super()
+    this.width = width
+    this.height = height
+    this.color = color
   }
-  
-  class Dog extends Animal {
-    speak(): void {
-      console.log('The dog barks.');
-    }
+
+ getArea(): number {
+    return this.width * this.height
+ }
+
+getPerimeter(): number {
+ return 2 * (this.width + this.height)
   }
-  
-  class Cat extends Animal {
-    speak(): void {
-      console.log('The cat meows.');
-    }
-  }
-  
-  function makeAnimalSpeak(animal: Animal): void {
-    animal.speak();
-  }
-  
-  const myDog = new Dog();
-  const myCat = new Cat();
-  
-  makeAnimalSpeak(myDog); // The dog barks.
-  makeAnimalSpeak(myCat); // The cat meows.
-  `
+}`
   );
   
 
