@@ -3,10 +3,15 @@ import { ExampleCodeSnippet } from '../lib/classes/ExampleCodeSnippet'
 const section1 = document.querySelector('#section1')
 const section2 = document.querySelector('#section2')
 const section3 = document.querySelector('#section3')
+const section4 = document.querySelector('#section4')
+const section5 = document.querySelector('#section5')
+
 
 const example1 = document.querySelector('#example1')
 const example2 = document.querySelector('#example2')
 const example3 = document.querySelector('#example3')
+const example4 = document.querySelector('#example4')
+const example5 = document.querySelector('#example5')
 // add examples 4 Encapsulation and 5 Polymorphism
 
 const observerOptions = {
@@ -23,6 +28,8 @@ const sectionObserver = new IntersectionObserver(
 if (section1) sectionObserver.observe(section1)
 if (section2) sectionObserver.observe(section2)
 if (section3) sectionObserver.observe(section3)
+if (section4) sectionObserver.observe(section4)
+if (section5) sectionObserver.observe(section5)
 
 function callBackFunction(entries: IntersectionObserverEntry[]) {
   entries.forEach((entry) => {
@@ -104,6 +111,69 @@ class Circle extends Shape {
 
 if (example3) example3.innerHTML = inheritanceExample.renderCodeSnippet()
 
+  const encapsulationExample = new ExampleCodeSnippet(
+    'Encapsualtion Example',
+    `Encapsulation is a mechanism that binds data and the methods that operate on that data into a single unit. It restricts direct access to some of an object's components, providing a way to protect the internal state and enforce controlled interaction.`,
+    `class BankAccount {
+  private balance: number;
+
+  constructor(initialBalance: number) {
+    this.balance = initialBalance;
+  }
+
+  public deposit(amount: number): void {
+    if (amount > 0) this.balance += amount;
+  }
+
+  public getBalance(): number {
+    return this.balance;
+  }
+}
+
+const account = new BankAccount(1000);
+account.deposit(500);
+console.log(account.getBalance()); // 1500
+
+  `
+  )
+
+  if (example4) example4.innerHTML = encapsulationExample.renderCodeSnippet();
+
+  const polymorphismExample = new ExampleCodeSnippet(
+    'Polymorphism Example',
+    `Polymorphism is a mechanism that allows objects of different classes to be treated as objects of a common super class. It enables a single interface to represent different underlying forms (data types), allowing for flexible and reusable code.`,
+    `class Animal {
+    speak(): void {
+      console.log('The animal makes a sound.');
+    }
+  }
+  
+  class Dog extends Animal {
+    speak(): void {
+      console.log('The dog barks.');
+    }
+  }
+  
+  class Cat extends Animal {
+    speak(): void {
+      console.log('The cat meows.');
+    }
+  }
+  
+  function makeAnimalSpeak(animal: Animal): void {
+    animal.speak();
+  }
+  
+  const myDog = new Dog();
+  const myCat = new Cat();
+  
+  makeAnimalSpeak(myDog); // The dog barks.
+  makeAnimalSpeak(myCat); // The cat meows.
+  `
+  );
+  
+
+  if (example5) example5.innerHTML = polymorphismExample.renderCodeSnippet();
 
 
 
